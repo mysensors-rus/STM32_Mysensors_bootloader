@@ -1,0 +1,20 @@
+
+FILES -------------------------------------------------------------------------
+
+stm32lib/*
+  - all the (possibly consolidated) stm32 lib and usb example code
+
+main.c
+  - main loop and calling any hardware init stuff. timing hacks for EEPROM
+    writes not to block usb interrupts. logic to handle 2 second timeout then
+    jump to user code.
+
+hardware.c
+  - init routines to setup clocks, interrupts, also destructor functions.
+    does not include USB stuff. EEPROM read/write functions.
+
+
+TODO --------------------------------------------------------------------------
+
+ * pack the structs
+

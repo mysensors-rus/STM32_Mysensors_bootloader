@@ -1,0 +1,9 @@
+*.lst
+*.o
+*.elf
+*.lss
+*.map
+*.sym
+.dep
+.vscode
+tmp
