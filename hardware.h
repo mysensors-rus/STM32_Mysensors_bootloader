@@ -230,7 +230,7 @@ typedef unsigned         char uint8_t;
 
 #define FIRMWARE_BLOCK_SIZE		(16u)				//!< Size of each firmware block
 //#define FIRMWARE_START_OFFSET	(10u)				//!< Start offset for firmware in flash (DualOptiboot wants to keeps a signature first)
-#define FIRMWARE_START_OFFSET	(16u)
+#define FIRMWARE_START_OFFSET	(12u)
 #define FIRMWARE_START_ADDRESS  0x1000              // Сдвигаемся на размер загрузчика
 
 //TODO: #define SPI_port PA0

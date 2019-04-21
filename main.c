@@ -62,7 +62,7 @@ int main()
 
             setupFLASH();  //
             flashUnlock(); // Разблокируем флэш
-            uint32_t flashSize = (mybuff[5] << 24) | (mybuff[6] << 16) | (mybuff[7] << 8) | mybuff[8];
+            uint32_t flashSize = (mybuff[7] << 24) | (mybuff[8] << 16) | (mybuff[9] << 8) | mybuff[10];
 
             // #ifdef USE_USART             // Выводим размер прошивки
             //         Hex2Ascii(mybuff[5]);

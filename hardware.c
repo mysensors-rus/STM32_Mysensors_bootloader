@@ -370,9 +370,11 @@ uint8_t CheckFlashImage() {
         send_string_USART(myMessages[1]);
     #endif // USE_USART  
       
-      fast_read(FIRMWARE_START_ADDRESS,&mybuff[0],0x10);
-      
-      if (mybuff[0]=='F' && mybuff[1]=='L' && mybuff[2]=='X' && mybuff[3]=='I' && mybuff[4]==':' && mybuff[9]==':')
+      //fast_read(FIRMWARE_START_ADDRESS,&mybuff[0],0x10);
+      fast_read(0,&mybuff[0],0x10);
+
+
+      if (mybuff[0]==0x46 && mybuff[1]==0x4c && mybuff[2]==0x58 && mybuff[3]==0x49 && mybuff[4]==0x4d && mybuff[5]==0x47 && mybuff[6]==0x3a)
 	{
         // Сигнатура прошивки найдена
         #ifdef USE_USART
